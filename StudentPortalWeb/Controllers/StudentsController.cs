@@ -32,7 +32,7 @@ namespace StudentPortalWeb.Controllers
             await dbContext.Students.AddAsync(student);
             await dbContext.SaveChangesAsync();
 
-            return View();
+            return RedirectToAction("List", "Students");
         }
 
         [HttpGet]
